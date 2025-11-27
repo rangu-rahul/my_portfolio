@@ -30,17 +30,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5)z$6)5=kh7l9^dri_vvm#dv(9e9vbl!rx)j0b$air@r4wse#%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+import os
+
+DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = [
-    'my-portfolio-1ek3.onrender.com',
+    'my-portfolio-1ek3.onrender.com',  # Render live domain
     '.onrender.com',
     'localhost',
     '127.0.0.1'
 ]
-
-
-ALLOWED_HOSTS = []
 
 
 # Application definition
