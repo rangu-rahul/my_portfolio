@@ -30,7 +30,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5)z$6)5=kh7l9^dri_vvm#dv(9e9vbl!rx)j0b$air@r4wse#%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+ALLOWED_HOSTS = [
+    'my-portfolio-1ek3.onrender.com',
+    '.onrender.com',
+    'localhost',
+    '127.0.0.1'
+]
+
 
 ALLOWED_HOSTS = []
 
@@ -128,3 +136,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+STATIC_ROOT = BASE_DIR / "staticfiles"
